@@ -13,6 +13,7 @@ int main(void)
         int qtdNomes = 0;
 
 
+
         while (Op!=4)
         {
 
@@ -48,7 +49,7 @@ int main(void)
 int addNome(char N[][40], int i)
 {
 
-        printf("\nDigite seu nome\n");
+        printf("\nDigite outro nome\n");
         scanf("%s", N[i]);
 
         return ++i;
@@ -59,8 +60,8 @@ void mostraNome(char p[100][40], int i)
 {
         int j = 0;
 
-        for (; j < i; j++ )
-                printf("%s,\t", p[j]);
+        for (; j < i; j++)
+                printf("%s, ", p[j]);
 }
 
 
@@ -72,6 +73,6 @@ void removeNome(char Nome[][40] )
         printf("Posicao a ser removida: ");
         scanf("%d", &posicao );
 
-        strcpy(Nome[posicao-1], "vazia");
+        strcpy(Nome[posicao-1], "\t");
 
 }

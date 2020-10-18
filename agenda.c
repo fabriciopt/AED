@@ -16,9 +16,9 @@ int main(void)
         while (Op!=4)
         {
 
-                printf("\nTecle 1 para digitar seu nome\n");
-                printf("\nTecle 2 para listar nomes\n");
-                printf("\nTecle 3 para apagar nome\n");
+                printf("\nTecle 1 para adicionar um nome\n");
+                printf("\nTecle 2 para apagar nome\n");
+                printf("\nTecle 3 para listar nomes\n");
                 printf("\nTecle 4 para encerrar\n");
                 scanf( "%d", &Op );
 
@@ -28,10 +28,11 @@ int main(void)
                                 qtdNomes = addNome(Nome, qtdNomes);
                                 break;
                         case 2:
-                                mostraNome(Nome, qtdNomes);
+
+                                removeNome(Nome);
                                 break;
                         case 3:
-                                removeNome(Nome);
+                                mostraNome(Nome, qtdNomes);
                                 break;
                         case 4:
                                 break;
@@ -59,7 +60,7 @@ void mostraNome(char p[100][40], int i)
         int j = 0;
 
         for (; j < i; j++ )
-                printf("%s\n", p[j]);
+                printf("%s,\t", p[j]);
 }
 
 

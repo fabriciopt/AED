@@ -49,7 +49,7 @@ int main(void)
 int addNome(char N[][40], int i)
 {
 
-        printf("\nDigite outro nome\n");
+        printf("\nDigite um nome\n");
         scanf("%s", N[i]);
 
         return ++i;
@@ -65,7 +65,7 @@ void mostraNome(char p[100][40], int i)
 }
 
 
-void removeNome(char Nome[][40] )
+void removeNome(char Nome[][40])
 {
 
         int posicao = 0;
